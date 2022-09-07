@@ -33,7 +33,7 @@ WORKDIR /app
 COPY ./ /app/
 EXPOSE 8000
 
-ENV cpmsbe='dev'
+ENV env_todo='dev'
 RUN python3 manage.py makemigrations
 RUN python3 manage.py migrate
 ENTRYPOINT ["python3","manage.py","runserver","0.0.0.0:8700"]
